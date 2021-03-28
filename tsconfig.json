@@ -1,0 +1,25 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "lib": [
+      "ES2020"
+    ],
+    "module": "ES2020",
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noUnusedLocals": true,
+    "removeComments": false,
+    "target": "ES2020",
+    "importsNotUsedAsValues": "error",
+    "strictNullChecks": true,
+    "preserveConstEnums": true,
+    "outDir": "dist"
+  },
+  "include": [
+    "v*/**/*",
+    "default/**/*"
+  ]
+}
