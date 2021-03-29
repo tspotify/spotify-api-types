@@ -1,5 +1,6 @@
 node_modules/
 .vscode/
+docs
 
 # Don't commit build outputs
 dist
