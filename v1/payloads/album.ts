@@ -1,5 +1,6 @@
 import type { SimplifiedArtistObject } from './artist';
 import type { SimplifiedTrackObject } from './track';
+import type { PagingObject } from './misc';
 
 export interface SimplifiedAlbumObject {
   /**
@@ -102,7 +103,7 @@ export interface AlbumObject extends Omit<SimplifiedAlbumObject, 'album_group'> 
   /**
    * The tracks of the album
    */
-  tracks: Array<SimplifiedTrackObject>;
+  tracks: PagingObject<SimplifiedTrackObject>;
 }
 
 export interface AlbumRestrictionObject {
