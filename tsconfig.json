@@ -16,7 +16,8 @@
     "importsNotUsedAsValues": "error",
     "strictNullChecks": true,
     "preserveConstEnums": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "watch": true
   },
   "include": [
     "v*/**/*",
