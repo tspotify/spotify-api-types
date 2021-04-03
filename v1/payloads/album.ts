@@ -1,4 +1,5 @@
 import type { SimplifiedArtistObject } from './artist';
+import type { SimplifiedTrackObject } from './track';
 
 export interface SimplifiedAlbumObject {
   /**
@@ -101,7 +102,7 @@ export interface AlbumObject extends Omit<SimplifiedAlbumObject, 'album_group'> 
   /**
    * The tracks of the album
    */
-  tracks: Array<object>;
+  tracks: Array<SimplifiedTrackObject>;
 }
 
 export interface AlbumRestrictionObject {
