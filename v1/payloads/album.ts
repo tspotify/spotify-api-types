@@ -1,4 +1,3 @@
-import type { ArtistObject } from './artist';
 import type { SimplifiedArtistObject } from './artist';
 
 export interface SimplifiedAlbumObject {
@@ -74,11 +73,6 @@ export interface SimplifiedAlbumObject {
 }
 
 export interface AlbumObject extends Omit<SimplifiedAlbumObject, 'album_group'> {
-  /**
- * The artists of the album. Each artist object includes a link in href to more detailed information about the artist
- */
-  artists: Array<ArtistObject>;
-
   /**
    * The copyright statements of the album
    */

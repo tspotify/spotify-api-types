@@ -1,4 +1,4 @@
-import type { SimplifiedArtistObject, ArtistObject } from './artist';
+import type { SimplifiedArtistObject } from './artist';
 import type { SimplifiedAlbumObject } from './album';
 
 export interface LinkedTrackObject {
@@ -95,11 +95,6 @@ export interface TrackObject extends SimplifiedTrackObject {
    * The album on which the track appears. The album object includes a link in `href` to full information about the album
    */
   album: SimplifiedAlbumObject;
-
-  /**
-   * The artists who performed the track. Each artist object includes a link in `href` to more detailed information about the artist
-   */
-  artists: Array<ArtistObject>;
 
   /**
    * Known external IDs for the track
