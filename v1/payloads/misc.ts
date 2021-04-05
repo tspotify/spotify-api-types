@@ -34,3 +34,39 @@ export interface PagingObject<T> {
    */
   total: number;
 }
+
+export interface CopyrightObject {
+  /**
+   * The copyright text for this content
+   */
+  text: string;
+
+  /**
+   * The type of copyright: `C` = the copyright, `P` = the sound recording (performance) copyright
+   */
+  type: string;
+}
+
+export interface ExternalIdObject {
+  /**
+   * International Article Number
+   */
+  ean: string;
+
+  /**
+   * International Standard Recording Code
+   */
+  isrc: string;
+
+  /**
+   * Universal Product Code
+   */
+  upc: string;
+}
+
+export interface ExternalUrlObject {
+  /**
+   * The Spotify URL for the object
+   */
+  spotify: string;
+}

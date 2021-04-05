@@ -1,8 +1,10 @@
+import type { ExternalUrlObject } from './misc';
+
 export interface SimplifiedArtistObject {
   /**
    * Known external URLs for this artist
    */
-  external_urls: object;
+  external_urls: ExternalUrlObject;
 
   /**
    * A link to the Web API endpoint providing full details of the artist

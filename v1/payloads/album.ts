@@ -1,6 +1,6 @@
 import type { SimplifiedArtistObject } from './artist';
 import type { SimplifiedTrackObject } from './track';
-import type { PagingObject } from './misc';
+import type { PagingObject, ExternalUrlObject, ExternalIdObject, CopyrightObject } from './misc';
 
 export interface SimplifiedAlbumObject {
   /**
@@ -26,7 +26,7 @@ export interface SimplifiedAlbumObject {
   /**
    * Known external URLs for this album
    */
-  external_urls: object;
+  external_urls: ExternalUrlObject;
 
   /**
    * A link to the Web API endpoint providing full details of the album
@@ -78,12 +78,12 @@ export interface AlbumObject extends Omit<SimplifiedAlbumObject, 'album_group'> 
   /**
    * The copyright statements of the album
    */
-  copyrights: Array<object>;
+  copyrights: Array<CopyrightObject>;
 
   /**
    * Known external IDs for the album
    */
-  external_ids: object;
+  external_ids: ExternalIdObject;
 
   /**
    * A list of the genres used to classify the album. For example: `Prog Rock` , `Post-Grunge`. (If not yet classified, the array is empty)
