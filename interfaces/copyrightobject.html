@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SavedAlbumObject | spotify-api-types</title>
+	<title>CopyrightObject | spotify-api-types</title>
 	<meta name="description" content="Documentation for spotify-api-types">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
@@ -2713,8 +2713,16 @@ img {
 		<li class=" tsd-kind-interface">
 			<a href="artistobject.html" class="tsd-kind-icon">Artist<wbr>Object</a>
 		</li>
-		<li class=" tsd-kind-interface">
+		<li class="current tsd-kind-interface">
 			<a href="copyrightobject.html" class="tsd-kind-icon">Copyright<wbr>Object</a>
+			<ul>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="copyrightobject.html#text" class="tsd-kind-icon">text</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="copyrightobject.html#type" class="tsd-kind-icon">type</a>
+				</li>
+			</ul>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="externalidobject.html" class="tsd-kind-icon">External<wbr>IdObject</a>
@@ -2728,16 +2736,8 @@ img {
 		<li class=" tsd-kind-interface tsd-has-type-parameter">
 			<a href="pagingobject.html" class="tsd-kind-icon">Paging<wbr>Object</a>
 		</li>
-		<li class="current tsd-kind-interface">
+		<li class=" tsd-kind-interface">
 			<a href="savedalbumobject.html" class="tsd-kind-icon">Saved<wbr>Album<wbr>Object</a>
-			<ul>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="savedalbumobject.html#added_at" class="tsd-kind-icon">added_<wbr>at</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="savedalbumobject.html#album" class="tsd-kind-icon">album</a>
-				</li>
-			</ul>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="savedtrackobject.html" class="tsd-kind-icon">Saved<wbr>Track<wbr>Object</a>
@@ -2765,7 +2765,7 @@ img {
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">SavedAlbumObject</span>
+					<span class="target">CopyrightObject</span>
 				</li>
 			</ul>
 		</section>
@@ -2776,8 +2776,8 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="savedalbumobject.html#added_at" class="tsd-kind-icon">added_<wbr>at</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="savedalbumobject.html#album" class="tsd-kind-icon">album</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="copyrightobject.html#text" class="tsd-kind-icon">text</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="copyrightobject.html#type" class="tsd-kind-icon">type</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2786,32 +2786,32 @@ img {
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="added_at" class="tsd-anchor"></a>
-				<h3>added_<wbr>at</h3>
-				<div class="tsd-signature tsd-kind-icon">added_<wbr>at<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
+				<a name="text" class="tsd-anchor"></a>
+				<h3>text</h3>
+				<div class="tsd-signature tsd-kind-icon">text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/6e83156/v1/payloads/album.ts#L120">v1/payloads/album.ts:120</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/6e83156/v1/payloads/misc.ts#L42">v1/payloads/misc.ts:42</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>The date and time the album was saved. Timestamps are returned in <code>ISO 8601</code> format as Coordinated Universal Time (UTC) with a zero offset: <code>YYYY-MM-DDTHH:MM:SSZ</code>. If the time is imprecise (for example, the date/time of an album release), an additional field indicates the precision; see for example, <code>release_date</code> in an album object</p>
+						<p>The copyright text for this content</p>
 					</div>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="album" class="tsd-anchor"></a>
-				<h3>album</h3>
-				<div class="tsd-signature tsd-kind-icon">album<span class="tsd-signature-symbol">:</span> <a href="albumobject.html" class="tsd-signature-type" data-tsd-kind="Interface">AlbumObject</a></div>
+				<a name="type" class="tsd-anchor"></a>
+				<h3>type</h3>
+				<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/6e83156/v1/payloads/album.ts#L125">v1/payloads/album.ts:125</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/6e83156/v1/payloads/misc.ts#L47">v1/payloads/misc.ts:47</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Information about the album</p>
+						<p>The type of copyright: <code>C</code> = the copyright, <code>P</code> = the sound recording (performance) copyright</p>
 					</div>
 				</div>
 			</section>
