@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>GetMultipleAlbumObjectResponse | spotify-api-types</title>
+	<title>GetMultipleAlbumsQuery | spotify-api-types</title>
 	<meta name="description" content="Documentation for spotify-api-types">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
@@ -2723,18 +2723,21 @@ img {
 			<a href="externalurlobject.html" class="tsd-kind-icon">External<wbr>Url<wbr>Object</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="getmultiplealbumobjectquery.html" class="tsd-kind-icon">Get<wbr>Multiple<wbr>Album<wbr>Object<wbr>Query</a>
+			<a href="getalbumtracksquery.html" class="tsd-kind-icon">Get<wbr>Album<wbr>Tracks<wbr>Query</a>
 		</li>
 		<li class="current tsd-kind-interface">
-			<a href="getmultiplealbumobjectresponse.html" class="tsd-kind-icon">Get<wbr>Multiple<wbr>Album<wbr>Object<wbr>Response</a>
+			<a href="getmultiplealbumsquery.html" class="tsd-kind-icon">Get<wbr>Multiple<wbr>Albums<wbr>Query</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="getmultiplealbumobjectresponse.html#albums" class="tsd-kind-icon">albums</a>
+					<a href="getmultiplealbumsquery.html#ids" class="tsd-kind-icon">ids</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="getmultiplealbumsquery.html#market" class="tsd-kind-icon">market</a>
 				</li>
 			</ul>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="getsimplifiedtrackobjectpagingobjectquery.html" class="tsd-kind-icon">Get<wbr>Simplified<wbr>Track<wbr>Object<wbr>Paging<wbr>Object<wbr>Query</a>
+			<a href="getmultiplealbumsresponse.html" class="tsd-kind-icon">Get<wbr>Multiple<wbr>Albums<wbr>Response</a>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="linkedtrackobject.html" class="tsd-kind-icon">Linked<wbr>Track<wbr>Object</a>
@@ -2764,13 +2767,13 @@ img {
 			<a href="trackrestrictionobject.html" class="tsd-kind-icon">Track<wbr>Restriction<wbr>Object</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
-			<a href="../modules.html#getsimplifiedtrackobjectpagingobjectresponse" class="tsd-kind-icon">Get<wbr>Simplified<wbr>Track<wbr>Object<wbr>Paging<wbr>Object<wbr>Response</a>
+			<a href="../modules.html#getalbumquery" class="tsd-kind-icon">Get<wbr>Album<wbr>Query</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
-			<a href="../modules.html#getsinglealbumobjectquery" class="tsd-kind-icon">Get<wbr>Single<wbr>Album<wbr>Object<wbr>Query</a>
+			<a href="../modules.html#getalbumresponse" class="tsd-kind-icon">Get<wbr>Album<wbr>Response</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
-			<a href="../modules.html#getsinglealbumobjectresponse" class="tsd-kind-icon">Get<wbr>Single<wbr>Album<wbr>Object<wbr>Response</a>
+			<a href="../modules.html#getalbumtracksresponse" class="tsd-kind-icon">Get<wbr>Album<wbr>Tracks<wbr>Response</a>
 		</li>
 	</ul>
 </nav>
@@ -2789,7 +2792,7 @@ img {
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">GetMultipleAlbumObjectResponse</span>
+					<span class="target">GetMultipleAlbumsQuery</span>
 				</li>
 			</ul>
 		</section>
@@ -2800,7 +2803,8 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getmultiplealbumobjectresponse.html#albums" class="tsd-kind-icon">albums</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getmultiplealbumsquery.html#ids" class="tsd-kind-icon">ids</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getmultiplealbumsquery.html#market" class="tsd-kind-icon">market</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2809,14 +2813,39 @@ img {
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="albums" class="tsd-anchor"></a>
-				<h3>albums</h3>
-				<div class="tsd-signature tsd-kind-icon">albums<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="albumobject.html" class="tsd-signature-type" data-tsd-kind="Interface">AlbumObject</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></div>
+				<a name="ids" class="tsd-anchor"></a>
+				<h3>ids</h3>
+				<div class="tsd-signature tsd-kind-icon">ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/6e47b46/v1/rest/album.ts#L26">v1/rest/album.ts:26</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/f6d9bc9/v1/rest/album.ts#L12">v1/rest/album.ts:12</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A comma-separated list of the Spotify IDs for the albums. Maximum: 20 IDs</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="market" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> market</h3>
+				<div class="tsd-signature tsd-kind-icon">market<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/f6d9bc9/v1/rest/album.ts#L19">v1/rest/album.ts:19</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>An <code>ISO 3166-1 alpha-2</code> country code or the string <code>from_token</code>. Provide this parameter if you want to apply <code>Track Relinking</code></p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>see</dt>
+						<dd><p><a href="https://developer.spotify.com/documentation/general/guides/track-relinking-guide/">https://developer.spotify.com/documentation/general/guides/track-relinking-guide/</a></p>
+						</dd>
+					</dl>
+				</div>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
