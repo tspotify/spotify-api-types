@@ -29,12 +29,7 @@ export interface GetMultipleAlbumObjectResponse {
 /**
  * @see https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-an-album
  */
-export interface GetSingleAlbumObjectQuery extends Omit<GetMultipleAlbumObjectQuery, 'ids'> {
-  /**
-   * The Spotify ID of the album
-   */
-  id: string;
-}
+export type GetSingleAlbumObjectQuery = Omit<GetMultipleAlbumObjectQuery, 'ids'>
 
 /**
  * @see https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-an-album
