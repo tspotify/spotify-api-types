@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SavedAlbumObject | spotify-api-types</title>
+	<title>GetMultipleAlbumObjectResponse | spotify-api-types</title>
 	<meta name="description" content="Documentation for spotify-api-types">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
@@ -2725,8 +2725,13 @@ img {
 		<li class=" tsd-kind-interface">
 			<a href="getmultiplealbumobjectquery.html" class="tsd-kind-icon">Get<wbr>Multiple<wbr>Album<wbr>Object<wbr>Query</a>
 		</li>
-		<li class=" tsd-kind-interface">
+		<li class="current tsd-kind-interface">
 			<a href="getmultiplealbumobjectresponse.html" class="tsd-kind-icon">Get<wbr>Multiple<wbr>Album<wbr>Object<wbr>Response</a>
+			<ul>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="getmultiplealbumobjectresponse.html#albums" class="tsd-kind-icon">albums</a>
+				</li>
+			</ul>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="getsimplifiedtrackobjectpagingobjectquery.html" class="tsd-kind-icon">Get<wbr>Simplified<wbr>Track<wbr>Object<wbr>Paging<wbr>Object<wbr>Query</a>
@@ -2740,16 +2745,8 @@ img {
 		<li class=" tsd-kind-interface tsd-has-type-parameter">
 			<a href="pagingobject.html" class="tsd-kind-icon">Paging<wbr>Object</a>
 		</li>
-		<li class="current tsd-kind-interface">
+		<li class=" tsd-kind-interface">
 			<a href="savedalbumobject.html" class="tsd-kind-icon">Saved<wbr>Album<wbr>Object</a>
-			<ul>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="savedalbumobject.html#added_at" class="tsd-kind-icon">added_<wbr>at</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="savedalbumobject.html#album" class="tsd-kind-icon">album</a>
-				</li>
-			</ul>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="savedtrackobject.html" class="tsd-kind-icon">Saved<wbr>Track<wbr>Object</a>
@@ -2779,11 +2776,20 @@ img {
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<dl class="tsd-comment-tags">
+					<dt>see</dt>
+					<dd><p><a href="https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-multiple-albums">https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-multiple-albums</a></p>
+					</dd>
+				</dl>
+			</div>
+		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">SavedAlbumObject</span>
+					<span class="target">GetMultipleAlbumObjectResponse</span>
 				</li>
 			</ul>
 		</section>
@@ -2794,8 +2800,7 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="savedalbumobject.html#added_at" class="tsd-kind-icon">added_<wbr>at</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="savedalbumobject.html#album" class="tsd-kind-icon">album</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getmultiplealbumobjectresponse.html#albums" class="tsd-kind-icon">albums</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2804,34 +2809,14 @@ img {
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="added_at" class="tsd-anchor"></a>
-				<h3>added_<wbr>at</h3>
-				<div class="tsd-signature tsd-kind-icon">added_<wbr>at<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
+				<a name="albums" class="tsd-anchor"></a>
+				<h3>albums</h3>
+				<div class="tsd-signature tsd-kind-icon">albums<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="albumobject.html" class="tsd-signature-type" data-tsd-kind="Interface">AlbumObject</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/f3b7c46/v1/payloads/album.ts#L120">v1/payloads/album.ts:120</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/f3b7c46/v1/rest/album.ts#L26">v1/rest/album.ts:26</a></li>
 					</ul>
 				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>The date and time the album was saved. Timestamps are returned in <code>ISO 8601</code> format as Coordinated Universal Time (UTC) with a zero offset: <code>YYYY-MM-DDTHH:MM:SSZ</code>. If the time is imprecise (for example, the date/time of an album release), an additional field indicates the precision; see for example, <code>release_date</code> in an album object</p>
-					</div>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="album" class="tsd-anchor"></a>
-				<h3>album</h3>
-				<div class="tsd-signature tsd-kind-icon">album<span class="tsd-signature-symbol">:</span> <a href="albumobject.html" class="tsd-signature-type" data-tsd-kind="Interface">AlbumObject</a></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/f3b7c46/v1/payloads/album.ts#L125">v1/payloads/album.ts:125</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Information about the album</p>
-					</div>
-				</div>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
