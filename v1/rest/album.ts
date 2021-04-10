@@ -5,7 +5,7 @@ import type { PagingObject } from '../payloads/misc';
 /**
  * @see https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-multiple-albums
  */
-export interface GetMultipleAlbumObjectQuery {
+export interface GetMultipleAlbumsQuery {
   /**
    * A comma-separated list of the Spotify IDs for the albums. Maximum: 20 IDs
    */
@@ -22,25 +22,25 @@ export interface GetMultipleAlbumObjectQuery {
 /**
  * @see https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-multiple-albums
  */
-export interface GetMultipleAlbumObjectResponse {
+export interface GetMultipleAlbumsResponse {
   albums: Array<AlbumObject | null>;
 }
 
 /**
  * @see https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-an-album
  */
-export type GetSingleAlbumObjectQuery = Omit<GetMultipleAlbumObjectQuery, 'ids'>
+export type GetAlbumQuery = Omit<GetMultipleAlbumsQuery, 'ids'>
 
 /**
  * @see https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-an-album
  */
-export type GetSingleAlbumObjectResponse = AlbumObject;
+export type GetAlbumResponse = AlbumObject;
 
 
 /**
  * @see https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-an-albums-tracks
  */
-export interface GetSimplifiedTrackObjectPagingObjectQuery extends Omit<GetMultipleAlbumObjectQuery, 'ids'> {
+export interface GetAlbumTracksQuery extends Omit<GetMultipleAlbumsQuery, 'ids'> {
   /**
    * The maximum number of tracks to return. Default: `20`, Minimum: `1`, Maximum: `50`
    */
@@ -55,4 +55,4 @@ export interface GetSimplifiedTrackObjectPagingObjectQuery extends Omit<GetMulti
 /**
  * @see https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-an-albums-tracks
  */
-export type GetSimplifiedTrackObjectPagingObjectResponse = PagingObject<SimplifiedTrackObject>;
+export type GetAlbumTracksResponse = PagingObject<SimplifiedTrackObject>;
