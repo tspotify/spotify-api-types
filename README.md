@@ -1,7 +1,7 @@
 <div align="center">
   <br />
   <p>
-    <a href="#"><img src="https://i.imgur.com/uTZDcTh.png" width="700" height="350" alt="spotify-api-types" /></a>
+    <a href="#"><img src="https://i.imgur.com/uTZDcTh.png" alt="spotify-api-types" /></a>
   </p>
   <br />
   <p>
