@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SavedTrackObject | spotify-api-types</title>
+	<title>GetArtistAlbumsQuery | spotify-api-types</title>
 	<meta name="description" content="Documentation for spotify-api-types">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
@@ -2725,8 +2725,22 @@ img {
 		<li class=" tsd-kind-interface">
 			<a href="getalbumtracksquery.html" class="tsd-kind-icon">Get<wbr>Album<wbr>Tracks<wbr>Query</a>
 		</li>
-		<li class=" tsd-kind-interface">
+		<li class="current tsd-kind-interface">
 			<a href="getartistalbumsquery.html" class="tsd-kind-icon">Get<wbr>Artist<wbr>Albums<wbr>Query</a>
+			<ul>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="getartistalbumsquery.html#include_grups" class="tsd-kind-icon">include_<wbr>grups</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="getartistalbumsquery.html#limit" class="tsd-kind-icon">limit</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="getartistalbumsquery.html#market" class="tsd-kind-icon">market</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="getartistalbumsquery.html#offset" class="tsd-kind-icon">offset</a>
+				</li>
+			</ul>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="getartisttoptracksquery.html" class="tsd-kind-icon">Get<wbr>Artist<wbr>Top<wbr>Tracks<wbr>Query</a>
@@ -2758,16 +2772,8 @@ img {
 		<li class=" tsd-kind-interface">
 			<a href="savedalbumobject.html" class="tsd-kind-icon">Saved<wbr>Album<wbr>Object</a>
 		</li>
-		<li class="current tsd-kind-interface">
+		<li class=" tsd-kind-interface">
 			<a href="savedtrackobject.html" class="tsd-kind-icon">Saved<wbr>Track<wbr>Object</a>
-			<ul>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="savedtrackobject.html#added_at" class="tsd-kind-icon">added_<wbr>at</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="savedtrackobject.html#track" class="tsd-kind-icon">track</a>
-				</li>
-			</ul>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="simplifiedalbumobject.html" class="tsd-kind-icon">Simplified<wbr>Album<wbr>Object</a>
@@ -2809,11 +2815,19 @@ img {
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>Get Spotify catalog information about an artist’s albums</p>
+				</div>
+				<p><a href="https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-an-artists-albums">https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-an-artists-albums</a></p>
+			</div>
+		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">SavedTrackObject</span>
+					<span class="target">GetArtistAlbumsQuery</span>
 				</li>
 			</ul>
 		</section>
@@ -2824,8 +2838,10 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="savedtrackobject.html#added_at" class="tsd-kind-icon">added_<wbr>at</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="savedtrackobject.html#track" class="tsd-kind-icon">track</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getartistalbumsquery.html#include_grups" class="tsd-kind-icon">include_<wbr>grups</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getartistalbumsquery.html#limit" class="tsd-kind-icon">limit</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getartistalbumsquery.html#market" class="tsd-kind-icon">market</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getartistalbumsquery.html#offset" class="tsd-kind-icon">offset</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2834,33 +2850,77 @@ img {
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="added_at" class="tsd-anchor"></a>
-				<h3>added_<wbr>at</h3>
-				<div class="tsd-signature tsd-kind-icon">added_<wbr>at<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
+				<a name="include_grups" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> include_<wbr>grups</h3>
+				<div class="tsd-signature tsd-kind-icon">include_<wbr>grups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/dc8b20e/v1/payloads/track.ts#L130">v1/payloads/track.ts:130</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/dc8b20e/v1/rest/artist.ts#L85">v1/rest/artist.ts:85</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>The date and time the <code>track</code> was saved. Timestamps are returned in <code>ISO 8601</code> format as Coordinated Universal Time (UTC) with a zero offset: <code>YYYY-MM-DDTHH:MM:SSZ</code>. If the time is imprecise (for example, the date/time of an <code>album</code> release), an additional field indicates the precision. See for example, <code>release_date</code> in an <code>album</code> object.</p>
+						<p>A comma-separated list of keywords that will be used to filter the response. If not supplied, all album types will be returned. Valid values are:</p>
+						<ul>
+							<li>album</li>
+							<li>single</li>
+							<li>appears_on</li>
+							<li>compilation</li>
+						</ul>
 					</div>
+					<p>For example: <code>include_groups=album,single</code></p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="track" class="tsd-anchor"></a>
-				<h3>track</h3>
-				<div class="tsd-signature tsd-kind-icon">track<span class="tsd-signature-symbol">:</span> <a href="trackobject.html" class="tsd-signature-type" data-tsd-kind="Interface">TrackObject</a></div>
+				<a name="limit" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> limit</h3>
+				<div class="tsd-signature tsd-kind-icon">limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/dc8b20e/v1/payloads/track.ts#L135">v1/payloads/track.ts:135</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/dc8b20e/v1/rest/artist.ts#L104">v1/rest/artist.ts:104</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Information about the <code>track</code></p>
+						<p>The number of album objects to return.</p>
 					</div>
+					<p>Default: <code>20</code>, Minimum: <code>1</code>, Maximum: <code>50</code></p>
+					<p>For example: <code>limit=2</code></p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="market" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> market</h3>
+				<div class="tsd-signature tsd-kind-icon">market<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/dc8b20e/v1/rest/artist.ts#L95">v1/rest/artist.ts:95</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Synonym for country. <code>An ISO 3166-1 alpha-2</code> country code or the string <code>from_token</code>.
+						Supply this parameter to limit the response to one particular geographical market.</p>
+					</div>
+					<p>For example, for albums available in Sweden: <code>market=SE</code></p>
+					<p>If not given, results will be returned for all markets and you are likely to get duplicate results per album, one for each market in which the album is available!</p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="offset" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> offset</h3>
+				<div class="tsd-signature tsd-kind-icon">offset<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/dc8b20e/v1/rest/artist.ts#L113">v1/rest/artist.ts:113</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The index of the first album to return.</p>
+					</div>
+					<p>Default: <code>0</code> (i.e. the first album)</p>
+					<p>Use with limit to get the next set of albums</p>
 				</div>
 			</section>
 		</section>
