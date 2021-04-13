@@ -23,11 +23,6 @@ export interface GetMultipleArtistsResponse {
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-an-artist
  */
-export type GetArtistQuery = null;
-
-/**
- * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-an-artist
- */
 export type GetArtistResponse = ArtistObject;
 
 /**
@@ -49,13 +44,6 @@ export interface GetArtistTopTracksResponse {
    */
   tracks: Array<TrackObject>
 }
-
-/**
- * Get Spotify catalog information about artists similar to a given artist. Similarity is based on analysis of the Spotify community’s listening history
- * 
- * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-an-artists-related-artists
- */
-export type GetRelatedArtistsQuery = null;
 
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-an-artists-related-artists
