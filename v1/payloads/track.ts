@@ -1,6 +1,6 @@
 import type { SimplifiedArtistObject } from './artist';
 import type { SimplifiedAlbumObject } from './album';
-import type { ExternalUrlObject, ExternalIdObject } from './misc';
+import type { ExternalUrlObject, ExternalIdObject, BaseRestrictionObject, BaseSavedObject } from './misc';
 
 export interface LinkedTrackObject {
   /**
@@ -108,27 +108,9 @@ export interface TrackObject extends SimplifiedTrackObject {
   popularity: number;
 }
 
-export interface TrackRestrictionObject {
-  /**
-   * The reason for the restriction. Supported values:
-   * 
-   * `market` - The content item is not available in the given market
-   * 
-   * `product` - The content item is not available for the user’s subscription type
-   * 
-   * `explicit` - The content item is explicit and the user’s account is set to not play explicit content
-   * 
-   * **⚠️Note**: Additional reasons may be added in the future. If you use this field, make sure that your application safely handles unknown values
-   */
-  reason: string;
-}
+export type TrackRestrictionObject = BaseRestrictionObject;
 
-export interface SavedTrackObject {
-  /**
-   * The date and time the `track` was saved. Timestamps are returned in `ISO 8601` format as Coordinated Universal Time (UTC) with a zero offset: `YYYY-MM-DDTHH:MM:SSZ`. If the time is imprecise (for example, the date/time of an `album` release), an additional field indicates the precision. See for example, `release_date` in an `album` object.
-   */
-  added_at: Date;
-
+export interface SavedTrackObject extends BaseSavedObject {
   /**
    * Information about the `track`
    */

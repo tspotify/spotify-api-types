@@ -1,6 +1,6 @@
 import type { SimplifiedArtistObject } from './artist';
 import type { SimplifiedTrackObject } from './track';
-import type { PagingObject, ExternalUrlObject, ExternalIdObject, CopyrightObject } from './misc';
+import type { PagingObject, ExternalUrlObject, ExternalIdObject, CopyrightObject, BaseRestrictionObject, BaseSavedObject } from './misc';
 
 export interface SimplifiedAlbumObject {
   /**
@@ -106,19 +106,9 @@ export interface AlbumObject extends Omit<SimplifiedAlbumObject, 'album_group'> 
   tracks: PagingObject<SimplifiedTrackObject>;
 }
 
-export interface AlbumRestrictionObject {
-  /**
-   * The reason for the restriction
-   */
-  reason: string;
-}
+export type AlbumRestrictionObject = BaseRestrictionObject;
 
-export interface SavedAlbumObject {
-  /**
-   * The date and time the album was saved. Timestamps are returned in `ISO 8601` format as Coordinated Universal Time (UTC) with a zero offset: `YYYY-MM-DDTHH:MM:SSZ`. If the time is imprecise (for example, the date/time of an album release), an additional field indicates the precision; see for example, `release_date` in an album object
-   */
-  added_at: Date;
-
+export interface SavedAlbumObject extends BaseSavedObject {
   /**
    * Information about the album
    */

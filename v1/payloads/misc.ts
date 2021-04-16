@@ -1,3 +1,39 @@
+export interface CopyrightObject {
+  /**
+   * The copyright text for this content
+   */
+  text: string;
+
+  /**
+   * The type of copyright: `C` = the copyright, `P` = the sound recording (performance) copyright
+   */
+  type: string;
+}
+
+export interface ExternalIdObject {
+  /**
+   * International Article Number
+   */
+  ean: string;
+
+  /**
+   * International Standard Recording Code
+   */
+  isrc: string;
+
+  /**
+   * Universal Product Code
+   */
+  upc: string;
+}
+
+export interface ExternalUrlObject {
+  /**
+   * The Spotify URL for the object
+   */
+  spotify: string;
+}
+
 export interface PagingObject<T> {
   /**
    * A link to the Web API endpoint returning the full result of the request
@@ -35,38 +71,24 @@ export interface PagingObject<T> {
   total: number;
 }
 
-export interface CopyrightObject {
+export interface BaseRestrictionObject {
   /**
-   * The copyright text for this content
+   * The reason for the restriction. Supported values:
+   * 
+   * `market` - The content item is not available in the given market
+   * 
+   * `product` - The content item is not available for the user’s subscription type
+   * 
+   * `explicit` - The content item is explicit and the user’s account is set to not play explicit content
+   * 
+   * **⚠️Note**: Additional reasons may be added in the future. If you use this field, make sure that your application safely handles unknown values
    */
-  text: string;
-
-  /**
-   * The type of copyright: `C` = the copyright, `P` = the sound recording (performance) copyright
-   */
-  type: string;
+  reason: string;
 }
 
-export interface ExternalIdObject {
+export interface BaseSavedObject {
   /**
-   * International Article Number
+   * The date and time the `track` was saved. Timestamps are returned in `ISO 8601` format as Coordinated Universal Time (UTC) with a zero offset: `YYYY-MM-DDTHH:MM:SSZ`. If the time is imprecise (for example, the date/time of an `album` release), an additional field indicates the precision. See for example, `release_date` in an `album` object
    */
-  ean: string;
-
-  /**
-   * International Standard Recording Code
-   */
-  isrc: string;
-
-  /**
-   * Universal Product Code
-   */
-  upc: string;
-}
-
-export interface ExternalUrlObject {
-  /**
-   * The Spotify URL for the object
-   */
-  spotify: string;
+  added_at: Date;
 }

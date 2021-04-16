@@ -1,4 +1,6 @@
 export * from './album';
 export * from './artist';
-export * from './track';
+export * from './episode';
 export * from './misc';
+export * from './show';
+export * from './track';
