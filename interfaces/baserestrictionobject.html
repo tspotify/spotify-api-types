@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ExternalIdObject | spotify-api-types</title>
+	<title>BaseRestrictionObject | spotify-api-types</title>
 	<meta name="description" content="Documentation for spotify-api-types">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
@@ -2705,16 +2705,10 @@ img {
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class="current tsd-kind-interface">
-			<a href="externalidobject.html" class="tsd-kind-icon">External<wbr>IdObject</a>
+			<a href="baserestrictionobject.html" class="tsd-kind-icon">Base<wbr>Restriction<wbr>Object</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="externalidobject.html#ean" class="tsd-kind-icon">ean</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="externalidobject.html#isrc" class="tsd-kind-icon">isrc</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="externalidobject.html#upc" class="tsd-kind-icon">upc</a>
+					<a href="baserestrictionobject.html#reason" class="tsd-kind-icon">reason</a>
 				</li>
 			</ul>
 		</li>
@@ -2726,7 +2720,7 @@ img {
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">ExternalIdObject</span>
+					<span class="target">BaseRestrictionObject</span>
 				</li>
 			</ul>
 		</section>
@@ -2737,9 +2731,7 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="externalidobject.html#ean" class="tsd-kind-icon">ean</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="externalidobject.html#isrc" class="tsd-kind-icon">isrc</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="externalidobject.html#upc" class="tsd-kind-icon">upc</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="baserestrictionobject.html#reason" class="tsd-kind-icon">reason</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2748,48 +2740,22 @@ img {
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="ean" class="tsd-anchor"></a>
-				<h3>ean</h3>
-				<div class="tsd-signature tsd-kind-icon">ean<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="reason" class="tsd-anchor"></a>
+				<h3>reason</h3>
+				<div class="tsd-signature tsd-kind-icon">reason<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/30d6c8c/v1/payloads/misc.ts#L17">v1/payloads/misc.ts:17</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/30d6c8c/v1/payloads/misc.ts#L86">v1/payloads/misc.ts:86</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>International Article Number</p>
+						<p>The reason for the restriction. Supported values:</p>
 					</div>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="isrc" class="tsd-anchor"></a>
-				<h3>isrc</h3>
-				<div class="tsd-signature tsd-kind-icon">isrc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/30d6c8c/v1/payloads/misc.ts#L22">v1/payloads/misc.ts:22</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>International Standard Recording Code</p>
-					</div>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="upc" class="tsd-anchor"></a>
-				<h3>upc</h3>
-				<div class="tsd-signature tsd-kind-icon">upc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/30d6c8c/v1/payloads/misc.ts#L27">v1/payloads/misc.ts:27</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Universal Product Code</p>
-					</div>
+					<p><code>market</code> - The content item is not available in the given market</p>
+					<p><code>product</code> - The content item is not available for the user’s subscription type</p>
+					<p><code>explicit</code> - The content item is explicit and the user’s account is set to not play explicit content</p>
+					<p><strong>⚠️Note</strong>: Additional reasons may be added in the future. If you use this field, make sure that your application safely handles unknown values</p>
 				</div>
 			</section>
 		</section>

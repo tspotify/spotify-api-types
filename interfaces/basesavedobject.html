@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ExternalIdObject | spotify-api-types</title>
+	<title>BaseSavedObject | spotify-api-types</title>
 	<meta name="description" content="Documentation for spotify-api-types">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
@@ -2705,16 +2705,10 @@ img {
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class="current tsd-kind-interface">
-			<a href="externalidobject.html" class="tsd-kind-icon">External<wbr>IdObject</a>
+			<a href="basesavedobject.html" class="tsd-kind-icon">Base<wbr>Saved<wbr>Object</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="externalidobject.html#ean" class="tsd-kind-icon">ean</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="externalidobject.html#isrc" class="tsd-kind-icon">isrc</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="externalidobject.html#upc" class="tsd-kind-icon">upc</a>
+					<a href="basesavedobject.html#added_at" class="tsd-kind-icon">added_<wbr>at</a>
 				</li>
 			</ul>
 		</li>
@@ -2726,7 +2720,21 @@ img {
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">ExternalIdObject</span>
+					<span class="target">BaseSavedObject</span>
+					<ul class="tsd-hierarchy">
+						<li>
+							<a href="savedalbumobject.html" class="tsd-signature-type" data-tsd-kind="Interface">SavedAlbumObject</a>
+						</li>
+						<li>
+							<a href="savedepisodeobject.html" class="tsd-signature-type" data-tsd-kind="Interface">SavedEpisodeObject</a>
+						</li>
+						<li>
+							<a href="savedshowobject.html" class="tsd-signature-type" data-tsd-kind="Interface">SavedShowObject</a>
+						</li>
+						<li>
+							<a href="savedtrackobject.html" class="tsd-signature-type" data-tsd-kind="Interface">SavedTrackObject</a>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</section>
@@ -2737,9 +2745,7 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="externalidobject.html#ean" class="tsd-kind-icon">ean</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="externalidobject.html#isrc" class="tsd-kind-icon">isrc</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="externalidobject.html#upc" class="tsd-kind-icon">upc</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="basesavedobject.html#added_at" class="tsd-kind-icon">added_<wbr>at</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2748,47 +2754,17 @@ img {
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="ean" class="tsd-anchor"></a>
-				<h3>ean</h3>
-				<div class="tsd-signature tsd-kind-icon">ean<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="added_at" class="tsd-anchor"></a>
+				<h3>added_<wbr>at</h3>
+				<div class="tsd-signature tsd-kind-icon">added_<wbr>at<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/30d6c8c/v1/payloads/misc.ts#L17">v1/payloads/misc.ts:17</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/30d6c8c/v1/payloads/misc.ts#L93">v1/payloads/misc.ts:93</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>International Article Number</p>
-					</div>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="isrc" class="tsd-anchor"></a>
-				<h3>isrc</h3>
-				<div class="tsd-signature tsd-kind-icon">isrc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/30d6c8c/v1/payloads/misc.ts#L22">v1/payloads/misc.ts:22</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>International Standard Recording Code</p>
-					</div>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="upc" class="tsd-anchor"></a>
-				<h3>upc</h3>
-				<div class="tsd-signature tsd-kind-icon">upc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/30d6c8c/v1/payloads/misc.ts#L27">v1/payloads/misc.ts:27</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Universal Product Code</p>
+						<p>The date and time the <code>track</code> was saved. Timestamps are returned in <code>ISO 8601</code> format as Coordinated Universal Time (UTC) with a zero offset: <code>YYYY-MM-DDTHH:MM:SSZ</code>. If the time is imprecise (for example, the date/time of an <code>album</code> release), an additional field indicates the precision. See for example, <code>release_date</code> in an <code>album</code> object</p>
 					</div>
 				</div>
 			</section>

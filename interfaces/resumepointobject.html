@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ExternalIdObject | spotify-api-types</title>
+	<title>ResumePointObject | spotify-api-types</title>
 	<meta name="description" content="Documentation for spotify-api-types">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
@@ -2705,16 +2705,13 @@ img {
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class="current tsd-kind-interface">
-			<a href="externalidobject.html" class="tsd-kind-icon">External<wbr>IdObject</a>
+			<a href="resumepointobject.html" class="tsd-kind-icon">Resume<wbr>Point<wbr>Object</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="externalidobject.html#ean" class="tsd-kind-icon">ean</a>
+					<a href="resumepointobject.html#fully_played" class="tsd-kind-icon">fully_<wbr>played</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="externalidobject.html#isrc" class="tsd-kind-icon">isrc</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="externalidobject.html#upc" class="tsd-kind-icon">upc</a>
+					<a href="resumepointobject.html#resume_position_ms" class="tsd-kind-icon">resume_<wbr>position_<wbr>ms</a>
 				</li>
 			</ul>
 		</li>
@@ -2726,7 +2723,7 @@ img {
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">ExternalIdObject</span>
+					<span class="target">ResumePointObject</span>
 				</li>
 			</ul>
 		</section>
@@ -2737,9 +2734,8 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="externalidobject.html#ean" class="tsd-kind-icon">ean</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="externalidobject.html#isrc" class="tsd-kind-icon">isrc</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="externalidobject.html#upc" class="tsd-kind-icon">upc</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resumepointobject.html#fully_played" class="tsd-kind-icon">fully_<wbr>played</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resumepointobject.html#resume_position_ms" class="tsd-kind-icon">resume_<wbr>position_<wbr>ms</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2748,47 +2744,32 @@ img {
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="ean" class="tsd-anchor"></a>
-				<h3>ean</h3>
-				<div class="tsd-signature tsd-kind-icon">ean<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="fully_played" class="tsd-anchor"></a>
+				<h3>fully_<wbr>played</h3>
+				<div class="tsd-signature tsd-kind-icon">fully_<wbr>played<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/30d6c8c/v1/payloads/misc.ts#L17">v1/payloads/misc.ts:17</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/30d6c8c/v1/payloads/episode.ts#L127">v1/payloads/episode.ts:127</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>International Article Number</p>
+						<p>Whether or not the episode has been fully played by the user</p>
 					</div>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="isrc" class="tsd-anchor"></a>
-				<h3>isrc</h3>
-				<div class="tsd-signature tsd-kind-icon">isrc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="resume_position_ms" class="tsd-anchor"></a>
+				<h3>resume_<wbr>position_<wbr>ms</h3>
+				<div class="tsd-signature tsd-kind-icon">resume_<wbr>position_<wbr>ms<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/30d6c8c/v1/payloads/misc.ts#L22">v1/payloads/misc.ts:22</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/30d6c8c/v1/payloads/episode.ts#L132">v1/payloads/episode.ts:132</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>International Standard Recording Code</p>
-					</div>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="upc" class="tsd-anchor"></a>
-				<h3>upc</h3>
-				<div class="tsd-signature tsd-kind-icon">upc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/30d6c8c/v1/payloads/misc.ts#L27">v1/payloads/misc.ts:27</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Universal Product Code</p>
+						<p>The user’s most recent position in the episode in milliseconds</p>
 					</div>
 				</div>
 			</section>
