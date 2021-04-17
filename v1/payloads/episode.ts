@@ -1,3 +1,4 @@
+import type { ShowObject } from './show';
 import type { ExternalUrlObject, BaseRestrictionObject, BaseSavedObject } from './misc';
 
 export interface SimplifiedEpisodeObject {
@@ -30,6 +31,11 @@ export interface SimplifiedEpisodeObject {
    * A link to the Web API endpoint providing full details of the episode
    */
   href: string;
+
+  /**
+   * A description of the episode. This field may contain HTML tags
+   */
+  html_description: string;
 
   /**
    * The Spotify ID for the episode
@@ -101,14 +107,9 @@ export interface SimplifiedEpisodeObject {
 
 export interface EpisodeObject extends SimplifiedEpisodeObject {
   /**
-   * A description of the episode. This field may contain HTML tags
-   */
-  html_description: string;
-
-  /**
    * The show on which the episode belongs
    */
-  show: any;
+  show: ShowObject;
 }
 
 export type EpisodeRestrictionObject = BaseRestrictionObject;
