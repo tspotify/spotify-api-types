@@ -1,4 +1,4 @@
-import type { ShowObject } from './show';
+import type { SimplifiedShowObject } from './show';
 import type { ExternalUrlObject, BaseRestrictionObject, BaseSavedObject } from './misc';
 
 export interface SimplifiedEpisodeObject {
@@ -109,7 +109,7 @@ export interface EpisodeObject extends SimplifiedEpisodeObject {
   /**
    * The show on which the episode belongs
    */
-  show: ShowObject;
+  show: SimplifiedShowObject;
 }
 
 export type EpisodeRestrictionObject = BaseRestrictionObject;
