@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ExternalUrlObject | spotify-api-types</title>
+	<title>GetShowEpisodesQuery | spotify-api-types</title>
 	<meta name="description" content="Documentation for spotify-api-types">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
@@ -2705,10 +2705,16 @@ img {
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class="current tsd-kind-interface">
-			<a href="externalurlobject.html" class="tsd-kind-icon">External<wbr>Url<wbr>Object</a>
+			<a href="getshowepisodesquery.html" class="tsd-kind-icon">Get<wbr>Show<wbr>Episodes<wbr>Query</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="externalurlobject.html#spotify" class="tsd-kind-icon">spotify</a>
+					<a href="getshowepisodesquery.html#limit" class="tsd-kind-icon">limit</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="getshowepisodesquery.html#market" class="tsd-kind-icon">market</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="getshowepisodesquery.html#offset" class="tsd-kind-icon">offset</a>
 				</li>
 			</ul>
 		</li>
@@ -2716,11 +2722,23 @@ img {
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p><a href="https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-a-shows-episodes">https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-a-shows-episodes</a></p>
+				</div>
+			</div>
+		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">ExternalUrlObject</span>
+					<span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="getmultipleshowsquery.html" class="tsd-signature-type" data-tsd-kind="Interface">GetMultipleShowsQuery</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;ids&quot;</span><span class="tsd-signature-symbol">&gt;</span>
+					<ul class="tsd-hierarchy">
+						<li>
+							<span class="target">GetShowEpisodesQuery</span>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</section>
@@ -2731,7 +2749,9 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="externalurlobject.html#spotify" class="tsd-kind-icon">spotify</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getshowepisodesquery.html#limit" class="tsd-kind-icon">limit</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="getshowepisodesquery.html#market" class="tsd-kind-icon">market</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getshowepisodesquery.html#offset" class="tsd-kind-icon">offset</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2740,17 +2760,50 @@ img {
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="spotify" class="tsd-anchor"></a>
-				<h3>spotify</h3>
-				<div class="tsd-signature tsd-kind-icon">spotify<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="limit" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> limit</h3>
+				<div class="tsd-signature tsd-kind-icon">limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/bfbfe4a/v1/payloads/misc.ts#L34">v1/payloads/misc.ts:34</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/bfbfe4a/v1/rest/show.ts#L48">v1/rest/show.ts:48</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>The Spotify URL for the object</p>
+						<p>The maximum number of episodes to return. Default: <code>20</code>, Minimum: <code>1</code>, Maximum: <code>50</code></p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="market" class="tsd-anchor"></a>
+				<h3>market</h3>
+				<div class="tsd-signature tsd-kind-icon">market<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.market</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/bfbfe4a/v1/rest/show.ts#L21">v1/rest/show.ts:21</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>An <code>ISO 3166-1 alpha-2</code> country code. If a country code is specified, only shows that are available in that market will be returned</p>
+					</div>
+					<p>If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter</p>
+					<p><strong>Note</strong>: If neither market or user country are provided, the content is considered unavailable for the client</p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="offset" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> offset</h3>
+				<div class="tsd-signature tsd-kind-icon">offset<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/bfbfe4a/v1/rest/show.ts#L53">v1/rest/show.ts:53</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The index of the first episode to return. Default: <code>0</code> (the first object). Use with <code>limit</code> to get the next set of episodes</p>
 					</div>
 				</div>
 			</section>
