@@ -1,4 +1,4 @@
-import type { ShowObject } from '../payloads/show';
+import type { ShowObject, SimplifiedShowObject } from '../payloads/show';
 import type { SimplifiedEpisodeObject } from '../payloads/episode';
 import type { PagingObject } from '../payloads/misc';
 
@@ -25,7 +25,7 @@ export interface GetMultipleShowsQuery {
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-multiple-shows
  */
 export interface GetMultipleShowsResponse {
-  shows: Array<ShowObject | null>;
+  shows: Array<SimplifiedShowObject | null>;
 }
 
 /**
