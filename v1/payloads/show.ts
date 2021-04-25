@@ -1,4 +1,4 @@
-import type { CopyrightObject, ExternalUrlObject, BaseSavedObject } from './misc';
+import type { CopyrightObject, ExternalUrlObject, BaseSavedObject, PagingObject } from './misc';
 import type { SimplifiedEpisodeObject } from './episode';
 
 export interface SimplifiedShowObject {
@@ -82,7 +82,7 @@ export interface ShowObject extends SimplifiedShowObject {
   /**
    * A list of the show’s episodes
    */
-  episodes: Array<SimplifiedEpisodeObject>;
+  episodes: PagingObject<SimplifiedEpisodeObject>;
 }
 
 export interface SavedShowObject extends BaseSavedObject {
