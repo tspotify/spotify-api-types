@@ -70,7 +70,7 @@ export interface GetArtistAlbumsQuery {
    * 
    * For example: `include_groups=album,single`
    */
-  include_grups?: Array<AlbumGroupType>;
+  include_groups?: Array<AlbumGroupType>;
 
   /**
    * Synonym for country. `An ISO 3166-1 alpha-2` country code or the string `from_token`.

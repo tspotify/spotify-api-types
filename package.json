@@ -1,6 +1,6 @@
 {
   "name": "spotify-api-types",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Type definitions for Spotify API",
   "main": "./dist/default/index.js",
   "types": "./dist/default/index.d.ts",
