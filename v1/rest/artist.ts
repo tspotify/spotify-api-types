@@ -1,7 +1,7 @@
 import type { ArtistObject } from '../payloads/artist';
 import type { TrackObject } from '../payloads/track';
 import type { PagingObject } from '../payloads/misc';
-import type { SimplifiedAlbumObject } from '../payloads/album';
+import type { SimplifiedAlbumObject, AlbumGroupType } from '../payloads/album';
 
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-multiple-artists
@@ -70,7 +70,7 @@ export interface GetArtistAlbumsQuery {
    * 
    * For example: `include_groups=album,single`
    */
-  include_grups?: Array<string>
+  include_grups?: Array<AlbumGroupType>;
 
   /**
    * Synonym for country. `An ISO 3166-1 alpha-2` country code or the string `from_token`.

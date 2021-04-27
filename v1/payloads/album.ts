@@ -2,11 +2,13 @@ import type { SimplifiedArtistObject } from './artist';
 import type { SimplifiedTrackObject } from './track';
 import type { PagingObject, ExternalUrlObject, ExternalIdObject, CopyrightObject, BaseRestrictionObject, BaseSavedObject } from './misc';
 
+export type AlbumGroupType = 'album' | 'single' | 'compilation' | 'appears_on';
+
 export interface SimplifiedAlbumObject {
   /**
    * The field is present when getting an artist’s albums. Possible values are `album`, `single`, `compilation`, or `appears_on`. Compare to `album_type` this field represents relationship between the artist and the album
    */
-  album_group: string;
+  album_group?: AlbumGroupType;
 
   /**
    * The type of the album: `album`, `single`, or `compilation`
