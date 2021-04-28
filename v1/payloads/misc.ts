@@ -92,3 +92,46 @@ export interface BaseSavedObject {
    */
   added_at: Date;
 }
+
+export interface ExplicitContentSettingsObject {
+  /**
+   * When `true`, indicates that explicit content should not be played
+   */
+  filter_enabled: boolean;
+
+  /**
+   * When `true`, indicates that the explicit content setting is locked and can’t be changed by the user
+   */
+  filter_locked: boolean;
+}
+
+export interface FollowersObject {
+  /**
+   * A link to the Web API endpoint providing full details of the followers, `null` if not available.
+   * 
+   * **⚠️Note**: Please note that this will always be set to null, as the Web API does not support it at the moment
+   */
+  href: string | null;
+
+  /**
+   * The total number of followers
+   */
+  total: number;
+}
+
+export interface ImageObject {
+  /**
+   * The image height in pixels. If unknown: `null` or not returned
+   */
+  height?: number | null;
+
+  /**
+   * The source URL of the image
+   */
+  url: string;
+
+  /**
+   * The image width in pixels. If unknown: `null` or not returned
+   */
+  width?: number | null;
+}
