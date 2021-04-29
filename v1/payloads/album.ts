@@ -1,6 +1,6 @@
 import type { SimplifiedArtistObject } from './artist';
 import type { SimplifiedTrackObject } from './track';
-import type { PagingObject, ExternalUrlObject, ExternalIdObject, CopyrightObject, BaseRestrictionObject, BaseSavedObject } from './misc';
+import type { PagingObject, ExternalUrlObject, ExternalIdObject, CopyrightObject, BaseRestrictionObject, BaseSavedObject, ImageObject } from './misc';
 
 export type AlbumGroupType = 'album' | 'single' | 'compilation' | 'appears_on';
 
@@ -43,7 +43,7 @@ export interface SimplifiedAlbumObject {
   /**
    * The cover art for the album in various sizes, widest first
    */
-  images: Array<object>;
+  images: Array<ImageObject>;
 
   /**
    * The name of the album. In case of an album takedown, the value may be an empty string
