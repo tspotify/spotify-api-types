@@ -1,4 +1,4 @@
-import type { CopyrightObject, ExternalUrlObject, BaseSavedObject, PagingObject } from './misc';
+import type { CopyrightObject, ExternalUrlObject, BaseSavedObject, PagingObject, ImageObject } from './misc';
 import type { SimplifiedEpisodeObject } from './episode';
 
 export interface SimplifiedShowObject {
@@ -40,7 +40,7 @@ export interface SimplifiedShowObject {
   /**
    * The cover art for the show in various sizes, widest first
    */
-  images: Array<any>;
+  images: Array<ImageObject>;
 
   /**
    * True if all of the show’s episodes are hosted outside of Spotify’s CDN. This field might be null in some cases

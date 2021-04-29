@@ -1,4 +1,4 @@
-import type { ExternalUrlObject } from './misc';
+import type { ExternalUrlObject, FollowersObject, ImageObject } from './misc';
 
 export interface SimplifiedArtistObject {
   /**
@@ -36,7 +36,7 @@ export interface ArtistObject extends SimplifiedArtistObject {
   /**
    * Information about the followers of the artist
    */
-  followers: object;
+  followers: FollowersObject;
 
   /**
    * A list of the genres the artist is associated with. For example: `Prog Rock` , `Post-Grunge`. (If not yet classified, the array is empty)
@@ -46,7 +46,7 @@ export interface ArtistObject extends SimplifiedArtistObject {
   /**
    * Images of the artist in various sizes, widest first.
    */
-  images: Array<object>;
+  images: Array<ImageObject>;
 
   /**
    * The popularity of the artist. The value will be between `0` and `100`, with `100` being the most popular. The artist’s popularity is calculated from the popularity of all the artist’s tracks
