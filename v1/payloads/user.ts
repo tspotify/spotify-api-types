@@ -34,9 +34,9 @@ export interface PrivateUserObject extends PublicUserObject {
  */
 export interface PublicUserObject {
   /**
-   * The name displayed on the user’s profile. `null` if not available
+   * The name displayed on the user’s profile
    */
-  display_name: string | null;
+  display_name?: string | null;
 
   /**
    * Known public external URLs for this user
@@ -46,7 +46,7 @@ export interface PublicUserObject {
   /**
    * Information about the followers of this user
    */
-  followers: FollowersObject;
+  followers?: FollowersObject;
 
   /**
    * A link to the Web API endpoint for this user
@@ -61,7 +61,7 @@ export interface PublicUserObject {
   /**
    * The user’s profile image
    */
-  images: Array<ImageObject>;
+  images?: Array<ImageObject>;
 
   /**
    * The object type: `user`
