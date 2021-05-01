@@ -1,16 +1,21 @@
 import type { TrackObject } from './track';
 import type { EpisodeObject } from './episode';
 import type { PublicUserObject } from './user';
-import type { ExternalUrlObject, ImageObject, FollowersObject } from './misc';
+import type { ExternalUrlObject, ImageObject, FollowersObject, PagingObject } from './misc';
 
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-playlistobject
  */
-export interface PlaylistObject extends SimplifiedPlaylistObject {
+export interface PlaylistObject extends Omit<SimplifiedPlaylistObject, 'tracks'> {
   /**
    * Information about the followers of the playlist
    */
   followers: FollowersObject;
+
+  /**
+   * A list of playlist's tracks
+   */
+  tracks: PagingObject<PlaylistTrackObject>;
 }
 
 /**
@@ -106,7 +111,7 @@ export interface SimplifiedPlaylistObject {
   /**
    * The playlist’s public/private status:`true` the playlist is public, `false` the playlist is private, `null` the playlist status is not relevant
    */
-  public: boolean;
+  public: boolean | null;
 
   /**
    * The version identifier for the current playlist. Can be supplied in other requests to target a specific playlist version
