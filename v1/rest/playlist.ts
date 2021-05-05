@@ -1,4 +1,5 @@
-import type { PlaylistObject } from '../payloads/playlist';
+import type { PlaylistObject, SimplifiedPlaylistObject, PlaylistTrackObject } from '../payloads/playlist';
+import type { PagingObject, ImageObject } from '../payloads/misc';
 
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-playlist
@@ -36,3 +37,48 @@ export interface GetPlaylistQuery {
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-playlist
  */
 export type GetPlaylistResponse = PlaylistObject;
+
+/**
+ * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-list-users-playlists
+ */
+export interface GetUserPlaylistsQuery {
+  /**
+   * The maximum number of playlists to return. Default: `20`, Minimum: `1`, Maximum: `50`
+   */
+  limit?: number;
+
+  /**
+   * The index of the first playlist to return. Default: `0` (the first object). Use with `limit` to get the next set of playlists
+   */
+  offset?: number;
+}
+
+/**
+ * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-list-users-playlists
+ */
+export type GetUserPlaylistsResponse = PagingObject<SimplifiedPlaylistObject>;
+
+/**
+ * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-playlists-tracks
+ */
+export interface GetPlaylistItemsQuery extends GetPlaylistQuery {
+  /**
+   * The maximum number of items to return. Default: `100`, Minimum: `1`, Maximum: `50`
+   */
+  limit?: number
+
+  /**
+   * The index of the first item to return. Default: `0` (the first object)
+   */
+  offset?: number;
+}
+
+/**
+ * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-playlists-tracks
+ */
+export type GetPlaylistItemsResponse = PagingObject<PlaylistTrackObject>;
+
+/**
+ * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-playlist-cover
+ */
+export type GetPlaylistCoverImageResponse = ImageObject;
