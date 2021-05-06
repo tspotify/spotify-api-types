@@ -81,4 +81,4 @@ export type GetPlaylistItemsResponse = PagingObject<PlaylistTrackObject>;
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-playlist-cover
  */
-export type GetPlaylistCoverImageResponse = ImageObject;
+export type GetPlaylistCoverImageResponse = Array<ImageObject>;
