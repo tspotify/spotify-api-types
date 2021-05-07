@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BaseRestrictionObject | spotify-api-types</title>
+	<title>GetMultipleTracksAudioFeaturesQuery | spotify-api-types</title>
 	<meta name="description" content="Documentation for spotify-api-types">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
@@ -2705,10 +2705,10 @@ img {
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class="current tsd-kind-interface">
-			<a href="baserestrictionobject.html" class="tsd-kind-icon">Base<wbr>Restriction<wbr>Object</a>
+			<a href="getmultipletracksaudiofeaturesquery.html" class="tsd-kind-icon">Get<wbr>Multiple<wbr>Tracks<wbr>Audio<wbr>Features<wbr>Query</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="baserestrictionobject.html#reason" class="tsd-kind-icon">reason</a>
+					<a href="getmultipletracksaudiofeaturesquery.html#ids" class="tsd-kind-icon">ids</a>
 				</li>
 			</ul>
 		</li>
@@ -2716,11 +2716,18 @@ img {
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p><a href="https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-several-audio-features">https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-several-audio-features</a></p>
+				</div>
+			</div>
+		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">BaseRestrictionObject</span>
+					<span class="target">GetMultipleTracksAudioFeaturesQuery</span>
 				</li>
 			</ul>
 		</section>
@@ -2731,7 +2738,7 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="baserestrictionobject.html#reason" class="tsd-kind-icon">reason</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getmultipletracksaudiofeaturesquery.html#ids" class="tsd-kind-icon">ids</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2740,22 +2747,18 @@ img {
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="reason" class="tsd-anchor"></a>
-				<h3>reason</h3>
-				<div class="tsd-signature tsd-kind-icon">reason<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="ids" class="tsd-anchor"></a>
+				<h3>ids</h3>
+				<div class="tsd-signature tsd-kind-icon">ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/ac4b414/v1/payloads/misc.ts#L86">v1/payloads/misc.ts:86</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/ac4b414/v1/rest/track.ts#L42">v1/rest/track.ts:42</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>The reason for the restriction. Supported values:</p>
+						<p>A comma-separated list of the Spotify IDs for the tracks. Maximum: <code>100</code> IDs</p>
 					</div>
-					<p><code>market</code> - The content item is not available in the given market</p>
-					<p><code>product</code> - The content item is not available for the user’s subscription type</p>
-					<p><code>explicit</code> - The content item is explicit and the user’s account is set to not play explicit content</p>
-					<p><strong>⚠️Note</strong>: Additional reasons may be added in the future. If you use this field, make sure that your application safely handles unknown values</p>
 				</div>
 			</section>
 		</section>
