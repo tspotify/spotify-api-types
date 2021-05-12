@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>GetCategoryPlaylistResponse | spotify-api-types</title>
+	<title>GetFeaturedPlaylistsQuery | spotify-api-types</title>
 	<meta name="description" content="Documentation for spotify-api-types">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
@@ -2705,10 +2705,22 @@ img {
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class="current tsd-kind-interface">
-			<a href="getcategoryplaylistresponse.html" class="tsd-kind-icon">Get<wbr>Category<wbr>Playlist<wbr>Response</a>
+			<a href="getfeaturedplaylistsquery.html" class="tsd-kind-icon">Get<wbr>Featured<wbr>Playlists<wbr>Query</a>
 			<ul>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="getfeaturedplaylistsquery.html#country" class="tsd-kind-icon">country</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="getfeaturedplaylistsquery.html#limit" class="tsd-kind-icon">limit</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="getfeaturedplaylistsquery.html#locale" class="tsd-kind-icon">locale</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="getfeaturedplaylistsquery.html#offset" class="tsd-kind-icon">offset</a>
+				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="getcategoryplaylistresponse.html#playlists" class="tsd-kind-icon">playlists</a>
+					<a href="getfeaturedplaylistsquery.html#timestamp" class="tsd-kind-icon">timestamp</a>
 				</li>
 			</ul>
 		</li>
@@ -2719,7 +2731,7 @@ img {
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
-					<p><a href="https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-a-categories-playlists">https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-a-categories-playlists</a></p>
+					<p><a href="https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-featured-playlists">https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-featured-playlists</a></p>
 				</div>
 			</div>
 		</section>
@@ -2727,7 +2739,12 @@ img {
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">GetCategoryPlaylistResponse</span>
+					<a href="getmultiplecategoriesquery.html" class="tsd-signature-type" data-tsd-kind="Interface">GetMultipleCategoriesQuery</a>
+					<ul class="tsd-hierarchy">
+						<li>
+							<span class="target">GetFeaturedPlaylistsQuery</span>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</section>
@@ -2738,7 +2755,11 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getcategoryplaylistresponse.html#playlists" class="tsd-kind-icon">playlists</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="getfeaturedplaylistsquery.html#country" class="tsd-kind-icon">country</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="getfeaturedplaylistsquery.html#limit" class="tsd-kind-icon">limit</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="getfeaturedplaylistsquery.html#locale" class="tsd-kind-icon">locale</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="getfeaturedplaylistsquery.html#offset" class="tsd-kind-icon">offset</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getfeaturedplaylistsquery.html#timestamp" class="tsd-kind-icon">timestamp</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2746,15 +2767,85 @@ img {
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="playlists" class="tsd-anchor"></a>
-				<h3>playlists</h3>
-				<div class="tsd-signature tsd-kind-icon">playlists<span class="tsd-signature-symbol">:</span> <a href="pagingobject.html" class="tsd-signature-type" data-tsd-kind="Interface">PagingObject</a><span class="tsd-signature-symbol">&lt;</span><a href="simplifiedplaylistobject.html" class="tsd-signature-type" data-tsd-kind="Interface">SimplifiedPlaylistObject</a><span class="tsd-signature-symbol">&gt;</span></div>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="country" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> country</h3>
+				<div class="tsd-signature tsd-kind-icon">country<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
+					<p>Inherited from <a href="getmultiplecategoriesquery.html">GetMultipleCategoriesQuery</a>.<a href="getmultiplecategoriesquery.html#country">country</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/eebf4e1/v1/rest/category.ts#L85">v1/rest/category.ts:85</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/eebf4e1/v1/rest/category.ts#L12">v1/rest/category.ts:12</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A country: an <code>ISO 3166-1 alpha-2</code> country code. Provide this parameter if you want to narrow the list of returned categories to those relevant to a particular country. If omitted, the returned items will be globally relevant</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="limit" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> limit</h3>
+				<div class="tsd-signature tsd-kind-icon">limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from <a href="getmultiplecategoriesquery.html">GetMultipleCategoriesQuery</a>.<a href="getmultiplecategoriesquery.html#limit">limit</a></p>
+					<ul>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/eebf4e1/v1/rest/category.ts#L24">v1/rest/category.ts:24</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The maximum number of categories to return. Default: <code>20</code>, Minimum: <code>1</code>, Maximum: <code>50</code></p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="locale" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> locale</h3>
+				<div class="tsd-signature tsd-kind-icon">locale<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from <a href="getmultiplecategoriesquery.html">GetMultipleCategoriesQuery</a>.<a href="getmultiplecategoriesquery.html#locale">locale</a></p>
+					<ul>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/eebf4e1/v1/rest/category.ts#L19">v1/rest/category.ts:19</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The desired language, consisting of an <code>ISO 639-1</code> language code and an <code>ISO 3166-1 alpha-2</code> country code, joined by an underscore. For example: <code>es_MX</code>, meaning <code>Spanish (Mexico)</code>. Provide this parameter if you want the category metadata returned in a particular language</p>
+					</div>
+					<p><strong>Note:</strong> If <code>locale</code> is not supplied, or if the specified language is not available, all strings will be returned in the Spotify default language (American English). The locale parameter, combined with the country parameter, may give odd results if not carefully matched. For example <code>country=SE&amp;locale=de_DE</code> will return a list of categories relevant to Sweden but as German language strings</p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="offset" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> offset</h3>
+				<div class="tsd-signature tsd-kind-icon">offset<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from <a href="getmultiplecategoriesquery.html">GetMultipleCategoriesQuery</a>.<a href="getmultiplecategoriesquery.html#offset">offset</a></p>
+					<ul>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/eebf4e1/v1/rest/category.ts#L29">v1/rest/category.ts:29</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The index of the first item to return. Default: <code>0</code> (the first object). Use with <code>limit</code> to get the next set of categories</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="timestamp" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> timestamp</h3>
+				<div class="tsd-signature tsd-kind-icon">timestamp<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/eebf4e1/v1/rest/playlist.ts#L94">v1/rest/playlist.ts:94</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A timestamp in <code>ISO 8601</code> format: <code>yyyy-MM-ddTHH:mm:ss</code>. Use this parameter to specify the user’s local time to get results tailored for that specific date and time in the day. If not provided, the response defaults to the current UTC time. Example: <code>2014-10-23T09:00:00</code> for a user whose local time is <code>9AM</code>. If there were no featured playlists (or there is no data) at the specified time, the response will revert to the current UTC time</p>
+					</div>
+				</div>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
