@@ -1,5 +1,6 @@
 import type { PlaylistObject, SimplifiedPlaylistObject, PlaylistTrackObject } from '../payloads/playlist';
 import type { PagingObject, ImageObject } from '../payloads/misc';
+import type { GetMultipleCategoriesQuery } from './category';
 
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-playlist
@@ -82,3 +83,22 @@ export type GetPlaylistItemsResponse = PagingObject<PlaylistTrackObject>;
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-playlist-cover
  */
 export type GetPlaylistCoverImageResponse = Array<ImageObject>;
+
+/**
+ * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-featured-playlists
+ */
+export interface GetFeaturedPlaylistsQuery extends GetMultipleCategoriesQuery {
+  /**
+   * A timestamp in `ISO 8601` format: `yyyy-MM-ddTHH:mm:ss`. Use this parameter to specify the user’s local time to get results tailored for that specific date and time in the day. If not provided, the response defaults to the current UTC time. Example: `2014-10-23T09:00:00` for a user whose local time is `9AM`. If there were no featured playlists (or there is no data) at the specified time, the response will revert to the current UTC time
+   */
+  timestamp?: string;
+}
+
+/**
+ * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-featured-playlists
+ */
+export interface GetFeaturedPlaylistsResponse {
+  message: string;
+
+  playlists: PagingObject<SimplifiedPlaylistObject>;
+}

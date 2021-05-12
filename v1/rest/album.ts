@@ -1,6 +1,7 @@
-import type { AlbumObject } from '../payloads/album';
+import type { AlbumObject, SimplifiedAlbumObject } from '../payloads/album';
 import type { SimplifiedTrackObject } from '../payloads/track';
 import type { PagingObject } from '../payloads/misc';
+import type { GetCategoryPlaylistQuery } from './category';
 
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-multiple-albums
@@ -56,3 +57,15 @@ export interface GetAlbumTracksQuery extends Omit<GetMultipleAlbumsQuery, 'ids'>
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-an-albums-tracks
  */
 export type GetAlbumTracksResponse = PagingObject<SimplifiedTrackObject>;
+
+/**
+ * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-new-releases
+ */
+export type GetNewReleasesQuery = GetCategoryPlaylistQuery;
+
+/**
+ * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-new-releases
+ */
+export interface GetNewReleasesResponse {
+  albums: PagingObject<SimplifiedAlbumObject>;
+}
