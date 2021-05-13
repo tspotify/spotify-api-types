@@ -2713,7 +2713,7 @@ img {
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
 					<a href="getplaylistquery.html#fields" class="tsd-kind-icon">fields</a>
 				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a href="getplaylistquery.html#market" class="tsd-kind-icon">market</a>
 				</li>
 			</ul>
@@ -2733,10 +2733,15 @@ img {
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">GetPlaylistQuery</span>
+					<a href="market_r.html" class="tsd-signature-type" data-tsd-kind="Interface">Market_R</a>
 					<ul class="tsd-hierarchy">
 						<li>
-							<a href="getplaylistitemsquery.html" class="tsd-signature-type" data-tsd-kind="Interface">GetPlaylistItemsQuery</a>
+							<span class="target">GetPlaylistQuery</span>
+							<ul class="tsd-hierarchy">
+								<li>
+									<a href="getplaylistitemsquery.html" class="tsd-signature-type" data-tsd-kind="Interface">GetPlaylistItemsQuery</a>
+								</li>
+							</ul>
 						</li>
 					</ul>
 				</li>
@@ -2751,7 +2756,7 @@ img {
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getplaylistquery.html#additional_types" class="tsd-kind-icon">additional_<wbr>types</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getplaylistquery.html#fields" class="tsd-kind-icon">fields</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getplaylistquery.html#market" class="tsd-kind-icon">market</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="getplaylistquery.html#market" class="tsd-kind-icon">market</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2765,7 +2770,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">additional_<wbr>types<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/eebf4e1/v1/rest/playlist.ts#L34">v1/rest/playlist.ts:34</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/ba63fe4/v1/rest/playlist.ts#L25">v1/rest/playlist.ts:25</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2781,7 +2786,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">fields<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/eebf4e1/v1/rest/playlist.ts#L27">v1/rest/playlist.ts:27</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/ba63fe4/v1/rest/playlist.ts#L18">v1/rest/playlist.ts:18</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2793,21 +2798,22 @@ img {
 					<p>Fields can be excluded by prefixing them with an exclamation mark. For example: <code>fields=tracks.items(track(name,href,album(!name,href)))</code></p>
 				</div>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 				<a name="market" class="tsd-anchor"></a>
 				<h3>market</h3>
 				<div class="tsd-signature tsd-kind-icon">market<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
+					<p>Inherited from <a href="market_r.html">Market_R</a>.<a href="market_r.html#market">market</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/eebf4e1/v1/rest/playlist.ts#L16">v1/rest/playlist.ts:16</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/ba63fe4/v1/rest/util.ts#L50">v1/rest/util.ts:50</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>An <code>ISO 3166-1 alpha-2</code> country code or the string <code>from_token</code>. Provide this parameter if you want to apply <code>Track Relinking</code></p>
+						<p>An <code>ISO 3166-1 alpha-2</code> country code. If a country code is specified, only items that are available in that market will be returned</p>
 					</div>
-					<p>For episodes, if a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter</p>
-					<p><strong>⚠️Note</strong>: If neither market or user country are provided, the episode is considered unavailable for the client</p>
+					<p>If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter</p>
+					<p><strong>⚠️Note</strong>: If neither market nor user country is provided, the content is considered unavailable for the client</p>
 				</div>
 			</section>
 		</section>

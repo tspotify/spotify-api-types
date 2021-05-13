@@ -2707,7 +2707,7 @@ img {
 		<li class="current tsd-kind-interface">
 			<a href="getartisttoptracksquery.html" class="tsd-kind-icon">Get<wbr>Artist<wbr>Top<wbr>Tracks<wbr>Query</a>
 			<ul>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a href="getartisttoptracksquery.html#market" class="tsd-kind-icon">market</a>
 				</li>
 			</ul>
@@ -2727,7 +2727,12 @@ img {
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">GetArtistTopTracksQuery</span>
+					<a href="market_r.html" class="tsd-signature-type" data-tsd-kind="Interface">Market_R</a>
+					<ul class="tsd-hierarchy">
+						<li>
+							<span class="target">GetArtistTopTracksQuery</span>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</section>
@@ -2735,30 +2740,33 @@ img {
 			<h2>Index</h2>
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
-					<section class="tsd-index-section ">
+					<section class="tsd-index-section tsd-is-inherited">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getartisttoptracksquery.html#market" class="tsd-kind-icon">market</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="getartisttoptracksquery.html#market" class="tsd-kind-icon">market</a></li>
 						</ul>
 					</section>
 				</div>
 			</section>
 		</section>
-		<section class="tsd-panel-group tsd-member-group ">
+		<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 			<h2>Properties</h2>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 				<a name="market" class="tsd-anchor"></a>
 				<h3>market</h3>
 				<div class="tsd-signature tsd-kind-icon">market<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
+					<p>Inherited from <a href="market_r.html">Market_R</a>.<a href="market_r.html#market">market</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/eebf4e1/v1/rest/artist.ts#L35">v1/rest/artist.ts:35</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/ba63fe4/v1/rest/util.ts#L50">v1/rest/util.ts:50</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>An <code>ISO 3166-1 alpha-2</code> country code or the string <code>from_token</code>. Synonym for country</p>
+						<p>An <code>ISO 3166-1 alpha-2</code> country code. If a country code is specified, only items that are available in that market will be returned</p>
 					</div>
+					<p>If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter</p>
+					<p><strong>⚠️Note</strong>: If neither market nor user country is provided, the content is considered unavailable for the client</p>
 				</div>
 			</section>
 		</section>

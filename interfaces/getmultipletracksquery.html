@@ -2710,7 +2710,7 @@ img {
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
 					<a href="getmultipletracksquery.html#ids" class="tsd-kind-icon">ids</a>
 				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a href="getmultipletracksquery.html#market" class="tsd-kind-icon">market</a>
 				</li>
 			</ul>
@@ -2730,7 +2730,12 @@ img {
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">GetMultipleTracksQuery</span>
+					<a href="market_o.html" class="tsd-signature-type" data-tsd-kind="Interface">Market_O</a>
+					<ul class="tsd-hierarchy">
+						<li>
+							<span class="target">GetMultipleTracksQuery</span>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</section>
@@ -2742,7 +2747,7 @@ img {
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getmultipletracksquery.html#ids" class="tsd-kind-icon">ids</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="getmultipletracksquery.html#market" class="tsd-kind-icon">market</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="getmultipletracksquery.html#market" class="tsd-kind-icon">market</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2756,7 +2761,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/eebf4e1/v1/rest/track.ts#L10">v1/rest/track.ts:10</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/ba63fe4/v1/rest/track.ts#L11">v1/rest/track.ts:11</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2765,19 +2770,22 @@ img {
 					</div>
 				</div>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 				<a name="market" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagOptional">Optional</span> market</h3>
 				<div class="tsd-signature tsd-kind-icon">market<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
+					<p>Inherited from <a href="market_o.html">Market_O</a>.<a href="market_o.html#market">market</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/eebf4e1/v1/rest/track.ts#L15">v1/rest/track.ts:15</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/ba63fe4/v1/rest/util.ts#L39">v1/rest/util.ts:39</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>An <code>ISO 3166-1 alpha-2</code> country code or the string <code>from_token</code>. Provide this parameter if you want to apply Track Relinking</p>
+						<p>An <code>ISO 3166-1 alpha-2</code> country code. If a country code is specified, only items that are available in that market will be returned</p>
 					</div>
+					<p>If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter</p>
+					<p><strong>⚠️Note</strong>: If neither market nor user country is provided, the content is considered unavailable for the client</p>
 				</div>
 			</section>
 		</section>
