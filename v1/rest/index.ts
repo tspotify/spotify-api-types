@@ -7,3 +7,4 @@ export * from './playlist';
 export * from './show';
 export * from './track';
 export * from './user';
+export * from './util';

@@ -1,18 +1,14 @@
 import type { AudioFeaturesObject, TrackObject } from '../payloads/track';
+import type { Market_O } from './util';
 
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-several-tracks
  */
-export interface GetMultipleTracksQuery {
+export interface GetMultipleTracksQuery extends Market_O {
   /**
    * A comma-separated list of the Spotify IDs for the tracks. Maximum: `50` IDs
    */
   ids: Array<string>;
-
-  /**
-   * An `ISO 3166-1 alpha-2` country code or the string `from_token`. Provide this parameter if you want to apply Track Relinking
-   */
-  market?: string;
 }
 
 /**
@@ -25,7 +21,8 @@ export interface GetMultipleTracksResponse {
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-track
  */
-export type GetTrackQuery = Omit<GetMultipleTracksQuery, 'ids'>;
+export interface GetTrackQuery extends Market_O {
+}
 
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-track

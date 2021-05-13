@@ -2,6 +2,7 @@ import type { ArtistObject } from '../payloads/artist';
 import type { TrackObject } from '../payloads/track';
 import type { PagingObject } from '../payloads/misc';
 import type { SimplifiedAlbumObject, AlbumGroupType } from '../payloads/album';
+import type { Limit_O, Market_R, Offset_O } from './util';
 
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-multiple-artists
@@ -28,11 +29,7 @@ export type GetArtistResponse = ArtistObject;
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-an-artists-top-tracks
  */
-export interface GetArtistTopTracksQuery {
-  /**
-   * An `ISO 3166-1 alpha-2` country code or the string `from_token`. Synonym for country
-   */
-  market: string;
+export interface GetArtistTopTracksQuery extends Market_R {
 }
 
 /**
@@ -60,7 +57,7 @@ export interface GetRelatedArtistsResponse {
  * 
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-an-artists-albums
  */
-export interface GetArtistAlbumsQuery {
+export interface GetArtistAlbumsQuery extends Limit_O, Offset_O {
   /**
    * A comma-separated list of keywords that will be used to filter the response. If not supplied, all album types will be returned. Valid values are:
    * - album
@@ -73,32 +70,13 @@ export interface GetArtistAlbumsQuery {
   include_groups?: Array<AlbumGroupType>;
 
   /**
-   * Synonym for country. `An ISO 3166-1 alpha-2` country code or the string `from_token`.
-   * Supply this parameter to limit the response to one particular geographical market.
+   * Synonym for country. `An ISO 3166-1 alpha-2` country code or the string `from_token`. Supply this parameter to limit the response to one particular geographical market
    * 
    * For example, for albums available in Sweden: `market=SE`
    * 
    * If not given, results will be returned for all markets and you are likely to get duplicate results per album, one for each market in which the album is available!
    */
   market?: string;
-
-  /**
-   * The number of album objects to return.
-   * 
-   * Default: `20`, Minimum: `1`, Maximum: `50`
-   * 
-   * For example: `limit=2`
-   */
-  limit?: number;
-
-  /**
-   * The index of the first album to return.
-   * 
-   * Default: `0` (i.e. the first album)
-   * 
-   * Use with limit to get the next set of albums
-   */
-  offset?: number;
 }
 
 /**

@@ -1,20 +1,11 @@
 import type { PlaylistObject, SimplifiedPlaylistObject, PlaylistTrackObject } from '../payloads/playlist';
 import type { PagingObject, ImageObject } from '../payloads/misc';
-import type { GetMultipleCategoriesQuery } from './category';
+import type { Country_O, Limit_O, Locale_O, Market_R, Offset_O } from './util';
 
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-playlist
  */
-export interface GetPlaylistQuery {
-  /**
-   * An `ISO 3166-1 alpha-2` country code or the string `from_token`. Provide this parameter if you want to apply `Track Relinking`
-   * 
-   * For episodes, if a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter
-   *  
-   * **⚠️Note**: If neither market or user country are provided, the episode is considered unavailable for the client
-   */
-  market: string;
-
+export interface GetPlaylistQuery extends Market_R {
   /**
    * A comma-separated list of the fields to return. If omitted, all fields are returned. For example, to get just the playlist's description and URI: `fields=description,uri`
    * 
@@ -42,16 +33,7 @@ export type GetPlaylistResponse = PlaylistObject;
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-list-users-playlists
  */
-export interface GetUserPlaylistsQuery {
-  /**
-   * The maximum number of playlists to return. Default: `20`, Minimum: `1`, Maximum: `50`
-   */
-  limit?: number;
-
-  /**
-   * The index of the first playlist to return. Default: `0` (the first object). Use with `limit` to get the next set of playlists
-   */
-  offset?: number;
+export interface GetUserPlaylistsQuery extends Limit_O, Offset_O {
 }
 
 /**
@@ -62,16 +44,11 @@ export type GetUserPlaylistsResponse = PagingObject<SimplifiedPlaylistObject>;
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-playlists-tracks
  */
-export interface GetPlaylistItemsQuery extends GetPlaylistQuery {
+export interface GetPlaylistItemsQuery extends GetPlaylistQuery, Offset_O {
   /**
    * The maximum number of items to return. Default: `100`, Minimum: `1`, Maximum: `50`
    */
   limit?: number
-
-  /**
-   * The index of the first item to return. Default: `0` (the first object)
-   */
-  offset?: number;
 }
 
 /**
@@ -87,7 +64,7 @@ export type GetPlaylistCoverImageResponse = Array<ImageObject>;
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-featured-playlists
  */
-export interface GetFeaturedPlaylistsQuery extends GetMultipleCategoriesQuery {
+export interface GetFeaturedPlaylistsQuery extends Country_O, Limit_O, Locale_O, Offset_O {
   /**
    * A timestamp in `ISO 8601` format: `yyyy-MM-ddTHH:mm:ss`. Use this parameter to specify the user’s local time to get results tailored for that specific date and time in the day. If not provided, the response defaults to the current UTC time. Example: `2014-10-23T09:00:00` for a user whose local time is `9AM`. If there were no featured playlists (or there is no data) at the specified time, the response will revert to the current UTC time
    */
