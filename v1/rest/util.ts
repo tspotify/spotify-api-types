@@ -1,6 +1,6 @@
 // 1. Interfaces declared here are meant for internal use to reduce code duplication
-// 2. An interface that starts with `R_` states that all of its properties are required
-// 3. An interface that starts with `O_` states that all of its properties are optional
+// 2. An interface that ends with `R_` states that all of its properties are required
+// 3. An interface that ends with `O_` states that all of its properties are optional
 // 4. It is done to differentiate between two interfaces that have same properties but differ in them being optional or not
 
 export interface Country_O {

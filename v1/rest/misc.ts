@@ -8,3 +8,13 @@ export interface GetAvailableMarketsResponse {
    */
   markets: Array<string>;
 }
+
+/**
+ * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-recommendation-genres
+ */
+export interface GetRecommendationGenresResponse {
+  /**
+   * A list of available genres
+   */
+  genres: Array<string>;
+}
