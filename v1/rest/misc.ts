@@ -24,7 +24,7 @@ export interface GetRecommendationGenresResponse {
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-recommendations
  */
-export interface GetRecommendationsResponse extends Limit_O, Market_O {
+export interface GetRecommendationsQuery extends Limit_O, Market_O {
   /**
    * A comma separated list of Spotify IDs for seed artists. Up to 5 seed values may be provided in any combination of `seed_artists`, `seed_tracks` and `seed_genres`
    */
