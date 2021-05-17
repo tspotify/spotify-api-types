@@ -28,17 +28,17 @@ export interface GetRecommendationsQuery extends Limit_O, Market_O {
   /**
    * A comma separated list of Spotify IDs for seed artists. Up to 5 seed values may be provided in any combination of `seed_artists`, `seed_tracks` and `seed_genres`
    */
-  seed_artists: string;
+  seed_artists: Array<string>;
 
   /**
    * A comma separated list of any genres in the set of available genre seeds. Up to 5 seed values may be provided in any combination of `seed_artists`, `seed_tracks` and `seed_genres`
    */
-  seed_genres: string
+  seed_genres: Array<string>;
 
   /**
    * A comma separated list of Spotify IDs for a seed track. Up to 5 seed values may be provided in any combination of `seed_artists`, `seed_tracks` and `seed_genres`
    */
-  seed_tracks: string;
+  seed_tracks: Array<string>;
 
   min_acousticness?: number;
 
