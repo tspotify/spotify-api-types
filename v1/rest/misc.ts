@@ -1,3 +1,4 @@
+import type { RecommendationsObject } from '../payloads';
 import type { Limit_O, Market_O } from './util';
 
 /**
@@ -124,3 +125,8 @@ export interface GetRecommendationsQuery extends Limit_O, Market_O {
 
   target_valence?: number;
 }
+
+/**
+ * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-recommendations
+ */
+export type GetRecommendationsResponse = RecommendationsObject;
