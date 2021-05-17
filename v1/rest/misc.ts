@@ -1,4 +1,4 @@
-import type { Limit_O, Market_O } from "./util";
+import type { Limit_O, Market_O } from './util';
 
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-available-markets

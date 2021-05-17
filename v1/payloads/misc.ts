@@ -1,3 +1,5 @@
+import type { SimplifiedTrackObject } from './track';
+
 export interface CopyrightObject {
   /**
    * The copyright text for this content
@@ -134,4 +136,56 @@ export interface ImageObject {
    * The image width in pixels. If unknown: `null` or not returned
    */
   width?: number | null;
+}
+
+/**
+ * https://developer.spotify.com/documentation/web-api/reference/#object-recommendationseedobject
+ */
+export interface RecommendationSeedObject {
+  /**
+   * The number of tracks available after `min_*` and `max_*` filters have been applied
+   */
+  afterFilteringSize: number;
+
+  /**
+   * The number of tracks available after relinking for regional availability
+   */
+  afterRelinkingSize: number;
+
+  /**
+   * A link to the full track or artist data for this seed. For tracks this will be a link to a `TrackObject`. For artists a link to an `ArtistObject`. For genre seeds, this value will be `null`
+   */
+  href: string | null;
+
+  /**
+   * The id used to select this seed. This will be the same as the string used in the `seed_artists`, `seed_tracks` or `seed_genres` parameter
+   */
+  id: string;
+
+  /**
+   * The number of recommended tracks available for this seed
+   */
+  initialPoolSize: number;
+
+  /**
+   * The entity type of this seed
+   * 
+   * One of `ARTIST`, `TRACK` or `GENRE`
+   */
+  type: string;
+}
+
+/**
+ * https://developer.spotify.com/documentation/web-api/reference/#object-recommendationsobject
+ */
+export interface RecommendationsObject {
+  /**
+   * An array of recommendation seed objects
+   */
+  seeds: Array<RecommendationSeedObject>;
+
+  /**
+   * An array of simplified track objects, ordered according to the parameters supplied
+   */
+  tracks: Array<SimplifiedTrackObject>;
 }
