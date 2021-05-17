@@ -1,5 +1,5 @@
-import type { RecommendationsObject } from '../payloads';
-import type { Limit_O, Market_O } from './util';
+import type { ArtistObject, PagingObject, RecommendationsObject, SimplifiedAlbumObject, SimplifiedEpisodeObject, SimplifiedPlaylistObject, SimplifiedShowObject, TrackObject } from '../payloads';
+import type { Limit_O, Market_O, Offset_O } from './util';
 
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-available-markets
@@ -130,3 +130,59 @@ export interface GetRecommendationsQuery extends Limit_O, Market_O {
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-recommendations
  */
 export type GetRecommendationsResponse = RecommendationsObject;
+
+/**
+ * https://developer.spotify.com/documentation/web-api/reference/#endpoint-search
+ */
+export interface GetSearchQuery extends Market_O, Offset_O {
+  /**
+   * Search query keywords and optional field filters and operators
+   * 
+   * For example: `q=roadhouse%20blues`
+   */
+  q: string;
+
+  /**
+   * A comma-separated list of item types to search across
+   * 
+   * Valid types are: `album`, `artist`, `playlist`, `track`, `show`, and `episode`
+   * 
+   * Search results include hits from all the specified item types
+   * 
+   * For example: `q=name:abacab&type=album,track` returns both albums and tracks with `abacab` included in their name
+   */
+  type: Array<string>;
+
+  /**
+   * The maximum number of results to return
+   *  
+   * Default: `20`, Minimum: `1`, Maximum: `50`
+   * 
+   * **Note**: The limit is applied within each type, not on the total response. For example, if the limit value is `3` and the type is `artist,album` the response contains `3` artists and `3` albums
+   */
+  limit?: number;
+
+  /**
+   * If `include_external=audio` is specified the response will include any relevant audio content that is hosted externally
+   * 
+   * By default external content is filtered out from responses
+   */
+  include_external?: string;
+}
+
+/**
+ * https://developer.spotify.com/documentation/web-api/reference/#endpoint-search
+ */
+export interface GetSearchResponse {
+  albums: PagingObject<SimplifiedAlbumObject>;
+
+  artists: PagingObject<ArtistObject>;
+
+  playlists: PagingObject<SimplifiedPlaylistObject>;
+
+  tracks: PagingObject<TrackObject>;
+
+  shows: PagingObject<SimplifiedShowObject>;
+
+  episodes: PagingObject<SimplifiedEpisodeObject>;
+}
