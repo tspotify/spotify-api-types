@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Locale_O | spotify-api-types</title>
+	<title>RegularErrorObject | spotify-api-types</title>
 	<meta name="description" content="Documentation for spotify-api-types">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
@@ -2705,10 +2705,10 @@ img {
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class="current tsd-kind-interface">
-			<a href="locale_o.html" class="tsd-kind-icon">Locale_<wbr>O</a>
+			<a href="regularerrorobject.html" class="tsd-kind-icon">Regular<wbr>Error<wbr>Object</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="locale_o.html#locale" class="tsd-kind-icon">locale</a>
+					<a href="regularerrorobject.html#error" class="tsd-kind-icon">error</a>
 				</li>
 			</ul>
 		</li>
@@ -2716,22 +2716,18 @@ img {
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p><a href="https://developer.spotify.com/documentation/web-api/#regular-error-object">https://developer.spotify.com/documentation/web-api/#regular-error-object</a></p>
+				</div>
+			</div>
+		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">Locale_O</span>
-					<ul class="tsd-hierarchy">
-						<li>
-							<a href="getmultiplecategoriesquery.html" class="tsd-signature-type" data-tsd-kind="Interface">GetMultipleCategoriesQuery</a>
-						</li>
-						<li>
-							<a href="getcategoryquery.html" class="tsd-signature-type" data-tsd-kind="Interface">GetCategoryQuery</a>
-						</li>
-						<li>
-							<a href="getfeaturedplaylistsquery.html" class="tsd-signature-type" data-tsd-kind="Interface">GetFeaturedPlaylistsQuery</a>
-						</li>
-					</ul>
+					<span class="target">RegularErrorObject</span>
 				</li>
 			</ul>
 		</section>
@@ -2742,7 +2738,7 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="locale_o.html#locale" class="tsd-kind-icon">locale</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="regularerrorobject.html#error" class="tsd-kind-icon">error</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2751,20 +2747,14 @@ img {
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="locale" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagOptional">Optional</span> locale</h3>
-				<div class="tsd-signature tsd-kind-icon">locale<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="error" class="tsd-anchor"></a>
+				<h3>error</h3>
+				<div class="tsd-signature tsd-kind-icon">error<span class="tsd-signature-symbol">:</span> <a href="regularerrorobjectbody.html" class="tsd-signature-type" data-tsd-kind="Interface">RegularErrorObjectBody</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/6cceef0/v1/rest/util.ts#L28">v1/rest/util.ts:28</a></li>
+						<li>Defined in <a href="https://github.com/tspotify/spotify-api-types/blob/6cceef0/v1/payloads/error.ts#L20">v1/payloads/error.ts:20</a></li>
 					</ul>
 				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>The desired language, consisting of an <code>ISO 639-1</code> language code and an <code>ISO 3166-1 alpha-2</code> country code, joined by an underscore. For example: <code>es_MX</code>, meaning <code>Spanish (Mexico)</code>. Provide this parameter if you want the results returned in a particular language (where available)</p>
-					</div>
-					<p><strong>Note:</strong> If <code>locale</code> is not supplied, or if the specified language is not available, all strings will be returned in the Spotify default language (American English). The locale parameter, combined with the country parameter, may give odd results if not carefully matched. For example <code>country=SE&amp;locale=de_DE</code> will return a list of items relevant to Sweden but as German language strings</p>
-				</div>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
