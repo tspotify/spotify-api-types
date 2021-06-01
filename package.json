@@ -1,12 +1,12 @@
 {
   "name": "spotify-api-types",
-  "version": "0.4.3",
+  "version": "0.4.5",
   "description": "Type definitions for Spotify API",
   "main": "./dist/default/index.js",
   "types": "./dist/default/index.d.ts",
   "scripts": {
-    "build": "npx tsc",
-    "doc": "npx typedoc"
+    "build": "tsc",
+    "doc": "typedoc"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,6 @@
     "url": "https://github.com/tspotify/spotify-api-types/issues"
   },
   "homepage": "https://github.com/tspotify/spotify-api-types#readme",
-  "dependencies": {},
   "type": "module",
   "files": [
     "/dist"

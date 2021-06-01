@@ -3,6 +3,7 @@ export * from './artist';
 export * from './auth';
 export * from './category';
 export * from './episode';
+export * from './error';
 export * from './misc';
 export * from './playlist';
 export * from './show';
